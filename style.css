@@ -1,20 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+
 body {
     height: 125vh;
-    background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.com%2Ffree-photos-vectors%2Ftechnology-background&psig=AOvVaw26YKeDrpSmAnR7Te-1QqUI&ust=1585145250772000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCIDcw9PasugCFQAAAAAdAAAAABAD');
-    background-size: cover;
-    font-family: sans-serif;
+    background-image: url('img/bg.jpg');
+    background-size: ;
+    font-family: 'PT Sans', sans-serif;
     margin-top: 80px;
     padding: 30px;
 }
-
-@import url('https://fonts.googleapis.com/css?family=Ribeye+Marrow');
 
 main {
   font-size: 50px;
   color: black;
   font-weight: bold;
   letter-spacing: 5px;
-  font-family: "Ribeye Marrow"; /* Change this line */
 }
 
 header {
@@ -27,6 +27,7 @@ header {
     display: flex;
     align-items: center;
     box-shadow: 0 0 25px 0 black;
+    font-family: 'PT Sans', sans-serif;
 }
 
 header * {
@@ -34,10 +35,18 @@ header * {
 }
 
 header li {
+    float: right;
     margin: 20px;
 }
 
 header li a {
     color: black;
     text-decoration: none;
+}
+
+.name {
+    float: left;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
 }
