@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<title>CC1125</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<link rel="stylesheet" href="../css/font-awesome.min.css">
+<style>
+body, html {
+  height: 100%;
+  font-family: "Inconsolata", sans-serif;
+}
+
+.bgimg {
+  background-position: center;
+  background-size: cover;
+  background-image: url("./pcb.jpg");
+  min-height: 70%;
+  /* min-width: 100%; */
+}
+
+.menu {
+  display: none;
+}
+
+.right {
+  float: right;
+}
+</style>
+<body>
+
+<!-- Links (sit on top) -->
+<div class="w3-top">
+  <div class="w3-row w3-padding w3-black">
+    <div class="w3-col s3">
+      <a href="#" class="w3-button w3-block w3-black">TOP</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#about" class="w3-button w3-block w3-black">ABOUT</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#terms" class="w3-button w3-block w3-black">SCHEMATIC AND BOARD</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#sheet" class="w3-button w3-block w3-black">RF PCB GUIDELINES</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-bottomright w3-center w3-padding-large w3-hide-small">
+    <span class="w3-tag">Work done as Member of Communication Subsystem, IITBSSP</span>
+  </div>
+  <div class="w3-display-middle w3-center">
+    <span class="w3-text-white" style="font-size:100px; font-weight: bold;">CC1125<br></span><span class="w3-text-white" style="font-size:50px; font-weight: bold;">Peripheral Circuit PCB Design</span>
+  </div>
+  <!-- <div class="w3-display-bottomleft w3-center w3-padding-large">
+    <span class="w3-text-white">2019</span>
+  </div> -->
+</header>
+
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-sand w3-grayscale w3-large">
+
+<!-- About Container -->
+<div class="w3-container" id="about">
+  <div class="w3-content" style="max-width:1200px;">
+    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">WHAT IS CC1125 ?</span></h5>
+    <p>The CC1125 device is a fully integrated single-chip radio transceiver designed for high performance at very low-power
+      and low-voltage operation in cost-effective wireless systems. All filters are integrated, thus removing the need for costly external SAW and IF filters.
+      The device is mainly intended for the ISM (Industrial, Scientific and Medical) and SRD (Short Range Device) frequency bands at 164–192 MHz, 274–320 MHz, 410–480 MHz, and 820–960 MHz.</p>
+
+    <p>The CC1125 device provides extensive hardware support for packet handling, data buffering, burst transmissions, clear channel assessment, link quality indication, and Wake-On-Radio.
+      The main operating parameters of the CC1125 device can be controlled through an SPI interface. In a typical system, the CC1125 device will be used with a microcontroller and only a few external passive components.<p>
+
+  </div>
+</div>
+
+<!-- Terms Container -->
+<div class="w3-container" id="terms">
+  <div class="w3-content" style="max-width:1200px;">
+    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">SCHEMATIC AND BOARD DESIGN</span></h5>
+    <p>The task was to design a 4-layer RF PCB for the peripheral circuit of CC1125 for 435 MHz band. All layers are grounded except the third layer which is defined as VCC layer. On the first and fourth layer, signal traces were placed.</p>
+    <div class="w3-panel w3-leftbar w3-light-grey">
+      <p><i>Note - The schematic, layout and partlist can be downloaded for specific frequency bands from section 7.2 in the datasheet on <a href="https://www.ti.com/product/CC1125" target="_blank">this</a> website.</i></p>
+    </div>
+    Following is a schematic diagram made in EAGLE.
+    <img src="./sch.png" style="width:100%;" class="w3-margin-top w3-margin-bottom">
+    The board design and printed PCB are shown as follows. The red traces are on the first layer whereas the blue traces are on the fourth layer.<br>
+    <img src="./board.png" style="width:49%;" class="w3-margin-top w3-margin-bottom">
+    <img src="./print.png" style="width:49%;" class="w3-margin-top w3-margin-bottom">
+    <p>The soldering and testing of PCB will be done after the lockdown is over.</p>
+    Shown below is a CC1125 BoostXl development board available in the market. Although it comes with an inbuilt microcontroller, one can connect an external microcontroller as well.
+    <img src="./boostxl.jpg" style="width:100%;" class="w3-margin-top w3-margin-bottom">
+  </div>
+</div>
+
+<!-- Menu Container -->
+<div class="w3-container" id="sheet">
+  <div class="w3-content" style="max-width:1200px">
+
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">RF PCB Guidelines</span></h5>
+
+    Certain guidelines were kept in mind while designing the 4-layer RF PCB as follows:
+    <p>
+      <ul>
+        <li>All layers are defined as GND except the third layer which is the VCC.</li>
+        <li>There are three signals on the PCB - digital, RF (which actually carries our signal) and power signal (connected to VCC). Traces of RF and VCC signals are made thicker.</li>
+        <li>According to the DRC layer specifications, by using Saturn PCB toolkit, the thickness of the RF traces is determined (keeping impedance as 50 ohms). The trace width is calculated by considering board as microstrip passive circuit or coplanar passive circuit.</li>
+        <li>The digital traces thickness is kept equal to the pad width of the IC.</li>
+        <li>For RF signals, the width of the trace is changed only after the first element from the pad or clearance issues will come.</li>
+        <li>While routing, the RF traces are made straight and small in most of the cases. Vias are put in the empty spaces around the RF traces and are grounded by changing the name.
+        <li>The decoupling capacitors are placed close to each other and the IC. The oscillator is also placed near the IC.
+        <li>RF routing is preferred to be done in one layer.
+        <li>The traces that are VCC signals are made to be the thickest one. It is decided according to the amount of current circuit draws.
+        <li>The drill size of the vias is equal to the trace size in the corresponding traces.
+        <li>The middle pad of the IC is grounded using a lot of grounded vias.
+        <li>A few vias are needed to check the voltage at certain points. The stop property is applied to prevent soldermask to cover the via, and thus voltage can be checked using a multimeter.
+
+      </ul>
+    For full set of guidelines on RF PCB Design, head <a href="https://docs.google.com/document/d/1pMwwGaNVmAKEzdIxBCK27fZb9zMXPWVFlPqHzei3R3k/edit?usp=sharing" target="_blank">here</a>.
+
+
+
+  </div>
+</div>
+
+<!-- Contact/Area Container -->
+<!-- <div class="w3-container" id="where" style="padding-bottom:32px;">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">WHERE TO FIND US</span></h5>
+    <p>Find us at some address at some place.</p>
+    <img src="/w3images/map.jpg" class="w3-image" style="width:100%">
+    <p><span class="w3-tag">FYI!</span> We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste.</p>
+    <p><strong>Reserve</strong> a table, ask for today's special or just send us a message:</p>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="How many people" required name="People"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="datetime-local" placeholder="Date and time" required name="date" value="2020-11-16T20:00"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message \ Special requirements" required name="Message"></p>
+      <p><button class="w3-button w3-black" type="submit">SEND MESSAGE</button></p>
+    </form>
+  </div>
+</div> -->
+
+<!-- End page content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> | Made with <i class="fa fa-heart" style="color:#9C280F"></i> by Shreya
+</footer>
+
+</body>
+</html>
