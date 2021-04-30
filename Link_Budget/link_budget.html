@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<title>Link Budget</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<link rel="stylesheet" href="../css/font-awesome.min.css">
+<style>
+body, html {
+  height: 100%;
+  font-family: "Inconsolata", sans-serif;
+}
+
+.bgimg {
+  background-position: center;
+  background-size: cover;
+  background-image: url("./link.jpg");
+  min-height: 70%;
+  /* min-width: 100%; */
+}
+
+.menu {
+  display: none;
+}
+
+.right {
+  float: right;
+}
+</style>
+<body>
+
+<!-- Links (sit on top) -->
+<div class="w3-top">
+  <div class="w3-row w3-padding w3-black">
+    <div class="w3-col s3">
+      <a href="#" class="w3-button w3-block w3-black">TOP</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#about" class="w3-button w3-block w3-black">ABOUT</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#terms" class="w3-button w3-block w3-black">TERMS</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#sheet" class="w3-button w3-block w3-black">BUDGETS</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-bottomright w3-center w3-padding-large w3-hide-small">
+    <span class="w3-tag">Work done as Member of Communication Subsystem, IITBSSP</span>
+  </div>
+  <div class="w3-display-middle w3-center">
+    <span class="w3-text-white" style="font-size:100px; font-weight: bold;">Link<br>Budget</span>
+  </div>
+  <!-- <div class="w3-display-bottomleft w3-center w3-padding-large">
+    <span class="w3-text-white">2019</span>
+  </div> -->
+</header>
+
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-sand w3-grayscale w3-large">
+
+<!-- About Container -->
+<div class="w3-container" id="about">
+  <div class="w3-content" style="max-width:1200px;">
+    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">WHAT IS LINK BUDGET ?</span></h5>
+    <p>A link budget is an accounting of all of the power gains and losses that a communication signal experiences in a telecommunication system; from a transmitter, through a medium to the receiver.</p>
+    <p>A link budget is a design aid, calculated during the design of a communication system to determine the received power and to ensure that the information is received with an adequate SNR (Signal-to-Noise Ratio).
+      It enables us to calculate how far we can go with our equipment as it helps to estimate worst-case scenario.
+      Specifications of every component such as minimum gain of amplifier is directly or indirectly derived from link budget.
+    </p>
+    <p>Link budget can be summarised in one equation: <strong>Received Power = Transmitted Power + Gains - Losses</strong></p>
+    <img src="./schematic.png" style="width:100%;" class="w3-margin-top w3-margin-bottom">
+    The aim of link budget is to maximise the margin shown in the above figure.
+  </div>
+</div>
+
+<!-- Terms Container -->
+<div class="w3-container" id="terms">
+  <div class="w3-content" style="max-width:1200px;">
+    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">IMPORTANT TERMINOLOGY</span></h5>
+    <p>Some important terms in a link budget are -
+    </p>
+
+    <p><span class="w3-tag">Line Parameters</span></p>
+    <p><strong>Amplifier Gains</strong>- Amplifiers are connected to add gain or increase the signal power based on our link budget. Generally, a HPA (High Power Amplifier) is
+    connected on the transmitter side and an LNA (Low Noise Amplifier) is connected on the receiver side</p>
+    <p><strong>Cable and connector loss</strong>- These correspond to the cables and connectors used in our transmitter and receiver systems.</p>
+    <p><strong>Noise Temperature</strong>- It is the temperature of a resistor that has noise power equal to that of the device. It is generally used for calculation of signal to noise power density on receiver side in Link Budget.</p>
+
+    <p><span class="w3-tag">Antenna Parameters</span></p>
+
+    <p><strong>Antenna Gains</strong>- Every type of antenna adds a gain to the signal based on the type and directivity of the antenna.</p>
+    <p><strong>Antenna Mismatch Loss</strong>- This is the amount of power that will not be available on the output due to impedance mismatches and signal reflections.</p>
+    <p><strong>Antenna Polarisation Loss</strong>- Antenna polarisation is an important factor when designing antennas. This loss arises due to different
+      forms of polarisation of receiving and transmitting antenna.</p>
+    <p><strong>Antenna Pointing Loss</strong>- It is the loss suffered in signal strength due to misalignment of the antenna. As you would know while tracking a satellite with a
+      handheld antenna, we rotate the antenna as the satellite passes over. This is to minimize this loss.</p>
+
+
+    <p><span class="w3-tag">Propagation Loss</span></p>
+    <p><strong>Path Loss</strong>- As the signal travels, the region in which it exists also spreads. Thus the power density diminishes. This is accounted for in path loss.
+      It is dependent on the distance travelled and wavelength of signal.</p>
+    <p><strong>Ionospheric Loss</strong>- It arises due to interaction of our signal with ions since our signal is an electromagnetic signal.</p>
+    <p><strong>Atmospheric Loss</strong>- It is caused due to signal absorption by gases.</p>
+
+    <p><span class="w3-tag">Performance Parameters</span></p>
+    <p>In digital modulation modes, we receive bits and in analog mode, we receive continuous signals.
+Due to different modulations, there are different threshold parameters that define the performance of a communication link.</p>
+    <p><strong>Eb/No</strong>- Energy per bit to Noise density is the performance parameter for digital mode.</p>
+    <p><strong>Eb/No threshold</strong>- For every digital modulation mode, a threshold is defined at a desired bit error rate below which bits are not detected correctly.</p>
+    <p><strong>SNR</strong>- Signal to Noise Ratio is the performance paramter for analog mode.</p>
+    <p><strong>Receiver sensitivity</strong>- It is the threshold value of input analog signal power below which the receiver can no longer differentiate between the signal and the noise so it considers the signal also as noise floor.</p>
+    <p><strong>Link Margin</strong>- is calculated as (estimated value - threshold value) at the receiver's end.
+    The more the margin, the better is your communication link design.</p>
+
+  </div>
+</div>
+
+<!-- Menu Container -->
+<div class="w3-container" id="sheet">
+  <div class="w3-content" style="max-width:1200px">
+
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">Link Budget of a Satellite</span></h5>
+
+    AMSAT-IARU provides a professional quality spreadsheet available for the use of amateurs and other non-commercial satellite developers. It can be directly downloaded from <a href="https://www.amsat.org/wordpress/xtra/AMSAT-IARU_Link_Model_Rev2.5.3.xls" target="_blank">here</a> or you can
+    visit <a href="https://www.amsat.org/tools-for-calculating-spacecraft-communications-link-budgets-and-other-design-issues/" target="_blank">this</a> website. The following budgets
+    have been made using it.
+    <div class="w3-panel w3-leftbar w3-light-grey">
+      <p><i>Note - The data in the budgets corresponds to Advitiy, second student satellite of IITBSSP (IIT Bombay Student Satellite Program), designed for LEO (600 km) and operation at 435 MHz.<br>
+      <br>Only important values are stated in the following tables. Detalied spreadsheets with formulas are available <a href="https://docs.google.com/spreadsheets/d/1M6IvP42dko44iTuUD5VMinQwKf7TqVUyjb2_ydbEZoQ/edit?usp=sharing" target="_blank">here</a>. </i></p>
+    </div>
+
+    <div class="w3-row w3-center w3-card w3-padding">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Uplink');" id="myLink">
+        <div class="w3-col s6 tablink">Uplink</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Downlink');">
+        <div class="w3-col s6 tablink">Downlink</div>
+      </a>
+    </div>
+
+    <div id="Uplink" class="w3-container menu w3-padding-48 w3-card">
+      <h5>Path Loss at 600 km<span class="w3-text-grey right">143 dB</span></h5><br>
+      <h5>Transmitter System<span class="w3-text-grey right">Transmitter >> filter >> amplifier >> hps >>antenna</span></h5><br>
+      <h5>Transmitter power<span class="w3-text-grey right">10 W</span></h5><br>
+      <h5>Total line loss<span class="w3-text-grey right">1.84 dB</span></h5><br>
+      <h5>Antenna Gain<span class="w3-text-grey right">Yagi, 13 dB</span></h5><br>
+      <h5>Receiver system	<span class="w3-text-grey right">Antenna >> switch >> lna >> demodulator cc1125</span></h5><br>
+      <h5>System Noise Temperature<span class="w3-text-grey right">316.4664623	K</span></h5><br>
+      <h5>Antenna Gain<span class="w3-text-grey right">Dipole, 2.15 dB</span></h5><br>
+      <h5>Pointing error<span class="w3-text-grey right">	5	degrees</span></h5><br>
+      <h5>Antenna polarization loss<span class="w3-text-grey right">3.01 dB</span></h5><br>
+      <h5>Atmospheric gas loss	<span class="w3-text-grey right">2.1 dB</span></h5><br>
+      <h5>Ionosphere loss	<span class="w3-text-grey right">0.7 dB</span></h5><br>
+      <h5>Modulation<span class="w3-text-grey right">Non-coherent fsk</span></h5><br>
+      <h5>BER	<span class="w3-text-grey right">1.00E-04</span></h5><br>
+      <h5>Eb/No threshold	<span class="w3-text-grey right">13.9 dB</span></h5><br>
+      <h5>System Desired Data Rate<span class="w3-text-grey right">9600	bps</span></h5><br>
+      <h5>Received System Eb/No<span class="w3-text-grey right">37 dB</span></h5><br>
+      <h5>Margin by Eb/No method<span class="w3-text-grey right"><strong>24 dB<strong></span></h5><br>
+
+    </div>
+
+    <div id="Downlink" class="w3-container menu w3-padding-48 w3-card">
+      <h5>Path Loss at 600 km<span class="w3-text-grey right">143 dB</span></h5><br>
+      <h5>Transmitter System<span class="w3-text-grey right">Microcontroller >> waveform gen >> fm modulator >> rf switch >> amplifier >> rf switch >> antenna</span></h5><br>
+      <h5>Transmitter power<span class="w3-text-grey right">1 W</span></h5><br>
+      <h5>Total line loss<span class="w3-text-grey right">0.44 dB</span></h5><br>
+      <h5>Antenna Gain<span class="w3-text-grey right">Dipole, 2.15 dB</span></h5><br>
+      <h5>Receiver system	<span class="w3-text-grey right">Antenna >> switch >> lna >> receiver TS2000</span></h5><br>
+      <h5>System Noise Temperature<span class="w3-text-grey right">318.1069345	K</span></h5><br>
+      <h5>Antenna Gain<span class="w3-text-grey right">Yagi, 13 dB</span></h5><br>
+      <h5>Pointing error<span class="w3-text-grey right">	5	degrees</span></h5><br>
+      <h5>Antenna polarization loss<span class="w3-text-grey right">3.01 dB</span></h5><br>
+      <h5>Atmospheric gas loss	<span class="w3-text-grey right">2.1 dB</span></h5><br>
+      <h5>Ionosphere loss	<span class="w3-text-grey right">0.7 dB</span></h5><br>
+      <h5>Modulation<span class="w3-text-grey right">AFSK/FM</span></h5><br>
+      <h5>Ground station Receiver Bandwidth<span class="w3-text-grey right">5000 Hz</span></h5><br>
+      <h5>Ground station Receiver Noise Power<span class="w3-text-grey right">-136 dBm</span></h5><br>
+      <h5>Receiver Sensitivity of TS2000<span class="w3-text-grey right">-126 dBm</span></h5><br>
+      <h5>SNR threshold	<span class="w3-text-grey right">10 dB</span></h5><br>
+      <h5>Received System SNR at Ground Station<span class="w3-text-grey right">31 dB</span></h5><br>
+      <h5>Margin by SNR method<span class="w3-text-grey right"><strong>21 dB<strong></span></h5><br>
+    </div>
+    <!-- <img src="/w3images/coffeehouse2.jpg" style="width:100%;max-width:1000px;margin-top:32px;"> -->
+  </div>
+</div>
+
+<!-- Contact/Area Container -->
+<!-- <div class="w3-container" id="where" style="padding-bottom:32px;">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">WHERE TO FIND US</span></h5>
+    <p>Find us at some address at some place.</p>
+    <img src="/w3images/map.jpg" class="w3-image" style="width:100%">
+    <p><span class="w3-tag">FYI!</span> We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste.</p>
+    <p><strong>Reserve</strong> a table, ask for today's special or just send us a message:</p>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="How many people" required name="People"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="datetime-local" placeholder="Date and time" required name="date" value="2020-11-16T20:00"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message \ Special requirements" required name="Message"></p>
+      <p><button class="w3-button w3-black" type="submit">SEND MESSAGE</button></p>
+    </form>
+  </div>
+</div> -->
+
+<!-- End page content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> | Made with <i class="fa fa-heart" style="color:#9C280F"></i> by Shreya
+</footer>
+
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+}
+document.getElementById("myLink").click();
+</script>
+
+</body>
+</html>
