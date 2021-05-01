@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<title>AquaGerator</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<link rel="stylesheet" href="../css/font-awesome.min.css">
+<style>
+body, html {
+  height: 100%;
+  font-family: "Inconsolata", sans-serif;
+}
+
+.bgimg {
+  background-position: center;
+  background-size: cover;
+  background-image: url("./water.png");
+  min-height: 70%;
+  /* min-width: 100%; */
+}
+
+.menu {
+  display: none;
+}
+
+.right {
+  float: right;
+}
+</style>
+<body>
+
+<!-- Links (sit on top) -->
+<div class="w3-top">
+  <div class="w3-row w3-padding w3-black">
+    <div class="w3-col s3">
+      <a href="#" class="w3-button w3-block w3-black">TOP</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#about" class="w3-button w3-block w3-black">ABOUT</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#terms" class="w3-button w3-block w3-black">WORKING MECHANISM</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#sheet" class="w3-button w3-block w3-black">DESIGN</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-bottomright w3-center w3-padding-large w3-hide-small">
+    <span class="w3-tag">Work done as Institute Technical Summer Project, IIT Bombay</span>
+  </div>
+  <div class="w3-display-middle w3-center">
+    <span class="w3-text-white" style="font-size:100px; font-weight: bold;">AquaGerator</span><br>
+    <span class="w3-text-white" style="font-size:50px; font-weight: bold;">Making Water From Air</span><br><br><br><br><br><br>
+    <span class="w3-text-white" style="font-size:30px;">Team Members - Shreya Laddha, Hitul Desai,<br>Sudhanshu Meshram, Bhavika Kumar</span>
+  </div>
+  <!-- <div class="w3-display-bottomleft w3-center w3-padding-large">
+    <span class="w3-text-white">2019</span>
+  </div> -->
+</header>
+
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-sand w3-grayscale w3-large">
+
+<!-- About Container -->
+<div class="w3-container" id="about">
+  <div class="w3-content" style="max-width:1200px;">
+    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">ABOUT</span></h5>
+
+    <p>One of the biggest problems we were facing in institute was water shortage. For a couple of weeks, we were falling short of water to even
+      fulfil our basic needs of drinking water. Considering the fact that IIT Bombay is located in a coastal area with relative humidities of more than 70 %,
+      which led us to believe that we could use this water, which we can term as a very important resource not put to use yet, to fulfill our daily needs.</p>
+    <p>Our motto is  - <strong>Water, Wherever, Whenever</strong></p>
+    <p>In India, cities are mostly dependent on tanker water whose quality is not verified by water purifiers. Moreover, there is a lack of water during summers
+      in various parts of India. We have developed an atmospheric water generating technology will be able to provide pure drinking water 365 days a year.
+    </p>
+    <p>AquaGerator is a device that uses the basic principles of a refrigerator to generate fresh drinking water from the humidity in atmosphere and processing it
+      through a series of purification methods. In this cooling condensation based atmospheric water generator,
+      a compressor circulates refrigerant through a condenser and an evaporator coil which cools the air surrounding it, lowering the air’s dew point, and causing water to condense.
+      A controlled speed fan pushes filtered air over a coil, the resulting water is then passed into a holding tank with purification and filtration system to keep the water pure
+      by using UV and Carbon filters.
+    </p>
+  </div>
+</div>
+
+<!-- Terms Container -->
+<div class="w3-container" id="terms">
+  <div class="w3-content" style="max-width:1200px;">
+    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">WORKING MECHANISM</span></h5>
+    <div class="w3-center"><img src="./working.png" style="width:80%;" class="w3-center w3-margin-top w3-margin-bottom"><br></div>
+    <img src="./mech.png" style="width:40%; float:left; margin-right:10px;" class="w3-margin-top w3-margin-bottom">
+
+    <p>The air compressor sucks in air and compresses it, raising its temperature. This hot air is transferred to the airtight evaporator coils via copper tubes which contains the cold coolant.
+      The evaporator coil is a part of the refrigerant cycle. There will be heat exchange between the coolant and the hot air so that the temperature of the air falls below the dew point and thus air condenses.
+      The hot coolant is then sent to the refrigerator compressor which compresses it and sends it to the condenser which cools it again.
+      The condensed water is filtered using a carbon filter and a UV filter. Carbon filter settles physical impurities like particles, and UV filter kills the bacteria.
+      The processed water is now available for use. </p>
+
+
+    <!-- <div class="w3-panel w3-leftbar w3-light-grey">
+      <p><i>Note - The schematic, layout and partlist can be downloaded for specific frequency bands from section 7.2 in the datasheet on <a href="https://www.ti.com/product/CC1125" target="_blank">this</a> website.</i></p>
+    </div> -->
+
+
+  </div>
+</div>
+
+<!-- Menu Container -->
+<div class="w3-container" id="sheet">
+  <div class="w3-content" style="max-width:1200px">
+
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">DESIGN</span></h5>
+    <img src="./pic1.png" style="width:30%;" class="w3-margin-top w3-margin-bottom">
+
+    <img src="./pic3.png" style="width:30%;" class="w3-margin-top w3-margin-bottom">
+    <img src="./pic2.png" style="width:30%;" class="w3-margin-top w3-margin-bottom"> <br>
+    <div class="w3-center"><img src="./pic4.png" style="width:30%;" class="w3-center w3-margin-top w3-margin-bottom">
+    <img src="./pic5.png" style="width:30%;" class="w3-margin-top w3-margin-bottom">
+    </div>
+    <!-- <img src="./pic5.png" style="width:30%;" class="w3-margin-top w3-margin-bottom"> -->
+    <p>These are the images of the working prototype made by the team. It consists of an airtight container made out of wood covered in food grade plastic.
+    The insides of wood are covered by thermocol sheets and aluminium foils. The compressor is placed on the top of the container, the condensor is attached
+    to the back wall and the evaporator is latched onto the top face of container. An exhaust fan which works as air compressor is carved into the wood just above condensor
+    such that it blows over the evaporator coils. The bottom part of container is made into a quadrilateral pyramid shape that has an outlet at the tip of the base and is covered with aluminium sheets for maximising water collection capacity.
+    This container also has a small door to check the functionality from time to time.
+  </p>
+    Following is an overview of the design decisions made by us -
+    <ul>
+          <li>We had to cover wood with something so that it does not get wet. Our first alternative was to cover the whole inside of the container with aluminium,
+            We tried to stick aluminum with wood but it didn't hold well. So, we decided to go with food grade plastic. All pieces of wood are individually wrapped with multiple layers of food grade plastic and joined together with MSeal.
+            To prevent water to come in contact with mseal inside the container, we also wrapped the inside of the container with the plastic carefully.
+          <li>When we poured water in the container for testing, the water didn't come out smoothly. The water droplets stuck to the plastic as it had grooves that didn't let water to slide down.
+            To overcome this, we covered the base with four triangular aluminium sheets with the help of araldite.
+          <li>For the outlet of water, we fixed the spout of the pipe around the hole at the bottom with araldite and mseal. It will be attached to a valve through a garden pipe which will be finally attached to the filters.
+          <li>We came across the fact that lid with the attached evaporator can’t be moved after the coolant is filled in the refrigeration cycle as
+            any movement of evaporator could cause a leak in the cycle. We needed an opening to the container and hence decided to incorporate a door on the side wall,
+            that is just opposite to the side having the condenser coil.
+          <li>The height of the container had to be increased to provide a better support to the condenser coil.
+          <li>Wood rots due to the contact of water, although covered with layers of plastic sheets there was a risk of water seeping through them to the wood.
+            To tackle this we decided to stick thermocol sheets on the inner side of the walls and further cover it will aluminum foil and sealing the ends with duct-tape
+            as the adhesive on it is least affected by water, unlike normal tape that loses its adhesivity in water. The tri-layer of wood,thermocol and aluminium would allow the least amount of heat follow and thus
+            a better insulation from the surrounding leading to more efficient cooling.
+          <li>We used an exhaust fan instead of the air compressor as it facilitates the movement of air over the compressor coil. There was no longer the need of an air compressor.
+    </ul>
+    The components and their costs are as follows:
+    <div class="w3-container w3-padding-24 w3-card w3-margin-top w3-margin-bottom">
+      <h5>Refrigerator compressor 12x7x7 inches<span class="w3-text-grey right">Rs 2650</span></h5><br>
+      <h5>Expansion valve<span class="w3-text-grey right">Rs 2350</span></h5><br>
+      <h5>Condenser 30x20 inches<span class="w3-text-grey right">Rs 250</span></h5><br>
+      <h5>Carbon filter 30*12*11 cubic cm<span class="w3-text-grey right">Rs 350</span></h5><br>
+      <h5>UV filter 18*16*8 cubic cm<span class="w3-text-grey right">Rs 800</span></h5><br>
+      <h5>Transformer (for converting 220 volt ac to 12 volt )<span class="w3-text-grey right">Rs 420</span></h5><br>
+      <h5>Air compressor<span class="w3-text-grey right">Rs 850</span></h5><br>
+      <h5>Coolant HFC134A<span class="w3-text-grey right">Rs 250</span></h5><br>
+      <h5>Copper Tubes<span class="w3-text-grey right">	Rs 200</span></h5><br>
+      <h5>Fan<span class="w3-text-grey right">Rs 350</span></h5><br>
+      <h5>Thermostat<span class="w3-text-grey right">Rs 650</span></h5><br>
+      <h5>Cooling coil/ Evaporator 12x16x6 inches<span class="w3-text-grey right">Rs 550</span></h5><br>
+      <h5>Gas filling cost<span class="w3-text-grey right">Rs 2200</span></h5><br>
+      <h5>Aluminium sheets for casing<span class="w3-text-grey right"></span></h5><br>
+      <h5>Wood planks for structure<span class="w3-text-grey right"></span></h5><br>
+      <h5>Adhesives - Araldite, MSeal<span class="w3-text-grey right"></span></h5><br>
+      <h5>Approximate project cost<span class="w3-text-grey right">Rs 16000</span></h5><br>
+    </div>
+    The whole project report with timeline is available <a href="https://docs.google.com/document/d/1rGKSaTZ1RQYT9CbzNsUNPaT9gJCbHQW2uxV7dsv6Uk4/edit?usp=sharing" target="_blank">here</a>.
+
+  </div>
+</div>
+
+<!-- Contact/Area Container -->
+<!-- <div class="w3-container" id="where" style="padding-bottom:32px;">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">WHERE TO FIND US</span></h5>
+    <p>Find us at some address at some place.</p>
+    <img src="/w3images/map.jpg" class="w3-image" style="width:100%">
+    <p><span class="w3-tag">FYI!</span> We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste.</p>
+    <p><strong>Reserve</strong> a table, ask for today's special or just send us a message:</p>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="How many people" required name="People"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="datetime-local" placeholder="Date and time" required name="date" value="2020-11-16T20:00"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message \ Special requirements" required name="Message"></p>
+      <p><button class="w3-button w3-black" type="submit">SEND MESSAGE</button></p>
+    </form>
+  </div>
+</div> -->
+
+<!-- End page content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-light-grey w3-padding-16 w3-large ">
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> | Made with <i class="fa fa-heart" style="color:#9C280F"></i> by <a href="https://www.linkedin.com/in/shreya-laddha/" target="_blank">Shreya</a>
+</footer>
+
+</body>
+</html>
